@@ -1,0 +1,110 @@
+[data-role="dialog"] {
+    display: none;
+
+    & > .popup {
+        width: var(--width);
+        max-width: 90vw;
+        background-color: #fff;
+        box-shadow: 0 0 12px rgba(0,0,0,.6);
+        border-radius: .3125em;
+        overflow: clip;
+
+        [data-role="page"] {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+    }
+
+    &.before-open {
+        display: block;
+        visibility: hidden;
+    }
+
+    &.open {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%; 
+            background-color: rgba(0,0,0,0.35);
+            animation-name: fade-in;
+            animation-duration: 0.3s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: both;            
+        }
+
+        & > .popup {
+            animation-name: pop-in;
+            animation-duration: 0.3s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: both;            
+        }
+    }
+
+    &.overflow {
+        display: block;
+        overflow-y: auto;
+        background-color: rgba(0,0,0,0.35);
+
+        &::before {
+            display: none;
+        }
+
+        & > .popup {
+            position: relative;
+            margin-block: 2em;
+            margin-inline: auto;
+        }
+    }
+
+    &.transition-out {
+        &::before {
+            animation-name: fade-out;
+            animation-duration: 0.3s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: both;            
+        }
+
+        & > .popup {
+            animation-name: pop-out;
+            animation-duration: 0.3s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: both;     
+        }
+    }
+
+    &[data-id="page-dialog"] {
+        .popup {
+            padding-bottom: 1.5em;
+        }
+    }
+}
+
+
+@media screen and (max-width: 640px) {
+    [data-role="dialog"][data-id="page-dialog"] {
+        .popup {
+            max-width: 100%;
+            margin-block: 0 !important;
+            border-radius: 0;
+            box-sizing: border-box;
+            height: 100%;
+        }
+    }    
+}

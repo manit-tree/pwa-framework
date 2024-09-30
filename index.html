@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body class="pwa">
+	<main>
+	</main>
+
+	<template data-id="sidebar" data-role="sidebar">		
+		<div data-role="sidebar" class="">
+			<header>
+				<h1>Sidebar</h1>
+				<a href="#" data-role="icon-button" class="right" data-rel="toggle-sidebar"><span class="ui-icon-bars"></span></a>
+			</header>
+			<main>
+				<ul data-role="listview">
+					<li><a href="#home" class="ui-icon-carat-r">Home</a></li>	
+					<li><a href="#about" class="ui-icon-carat-r">About</a></li>	
+					<li><a href="#products" class="ui-icon-carat-r">Products</a></li>	
+					<li><a href="#contact" class="ui-icon-carat-r">Contact</a></li>	
+					<li><a href="#dialog" data-rel="dialog" class="ui-icon-carat-r">Dialog</a></li>	
+				</ul>
+			</main>
+			<footer>
+				<h3>Footer</h3>				
+			</footer>
+		</div>
+	</template>
+
+	<template data-id="dialog">
+		<div data-role="page">
+			<header>				
+				<h1>Sample Dialog</h1>
+				<a href="#" data-role="icon-button" class="right ui-round" data-rel="close"><span class="ui-icon-delete"></span></a>
+			</header>
+			<main>
+				<p><a href="#about">Lorem</a> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+				<a href="#" data-role="button" data-rel="close">OK</a>
+				<a href="#" data-role="button" data-rel="close">CANCEL</a>
+			</main>
+		</div>
+	</template>
+
+	<template data-id="home">		
+		<div data-role="page">
+			<header>
+				<h1>Home</h1>
+				<a href="#" data-role="icon-button" class="right" data-rel="toggle-sidebar"><span class="ui-icon-bars"></span></a>
+			</header>
+			<main>
+				<div class="box">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>					
+				</div>
+
+				<div class="card">					
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+				<a href="intent://scan/#Intent;scheme=zxing;package=com.google.zxing.client.android;end" data-role="button">ZXing</a>
+
+				<ul data-role="listview" class="inset">
+					<li>Acura</li>
+					<li>Audi</li>
+					<li>Bmw</li>
+					<li>Ferrari</li>
+				</ul>
+
+				<ul data-role="listview" class="inset">
+					<li><a href="#" class="ui-icon-carat-r">Acura</a></li>
+					<li><a href="#" class="ui-icon-carat-r">Audi</a></li>
+					<li><a href="#" class="ui-icon-carat-r">Bmw</a></li>
+					<li><a href="#" class="ui-icon-carat-r">Ferrari</a></li>
+				</ul>
+
+				<div class="flex-row gap-0.75em wrap">					
+					<a href="#home" data-role="button" class="ui-icon-action ui-icon-left ui-btn-inline">Home</a>
+					<a href="#about" data-role="button" class="ui-icon-action ui-icon-left ui-btn-inline">About</a>
+					<a href="#products" data-role="button" class="ui-icon-action ui-icon-left ui-btn-inline">Products</a>
+					<a href="#contact" data-role="button" class="ui-icon-action ui-icon-left ui-btn-inline">Contact</a>
+				</div>
+			</main>
+			<footer>
+				<h3>Footer</h3>
+			</footer>
+		</div>
+	</template>
+
+	<template data-id="about">		
+		<div data-role="page">
+			<header>
+				<h1>About</h1>
+				<a href="#" data-role="icon-button" class="right" data-rel="toggle-sidebar"><span class="ui-icon ui-icon-bars"></span></a>
+			</header>
+			<main>
+				<div data-role="placeholder">
+					<img class="lazy" src="" data-src="./images/sample.jpg" />					
+				</div>
+				<p><a href="#contact" data-rel="dialog">Lorem</a> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+				<a href="#home" data-role="button">Home</a>
+				<a href="#about" data-role="button">About</a>
+				<a href="#products" data-role="button">Products</a>
+				<a href="#contact" data-role="button">Contact</a>
+			</main>
+			<footer>
+				<h3>Footer</h3>
+			</footer>
+		</div>
+	</template>
+
+	<template data-id="products">		
+		<div data-role="page">
+			<header>
+				<h1>Products</h1>
+				<a href="#" data-role="icon-button" class="right" data-rel="toggle-sidebar"><span class="ui-icon ui-icon-bars"></span></a>
+			</header>
+			<main>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+				<a href="#home" data-role="button">Home</a>
+				<a href="#about" data-role="button" data-rel="dialog">About</a>
+				<a href="#products" data-role="button">Products</a>
+				<a href="#contact" data-role="button">Contact</a>
+			</main>
+			<footer>
+				<h3>Footer</h3>
+			</footer>
+		</div>
+	</template>
+
+	<template data-id="contact">		
+		<div data-role="page">
+			<header>
+				<h1>Contact</h1>
+				<a href="#" data-role="icon-button" class="right" data-rel="toggle-sidebar"><span class="ui-icon ui-icon-bars"></span></a>
+			</header>
+			<main>
+				<p><a href="#products" data-rel="dialog">Lorem</a> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+				<a href="#home" data-role="button">Home</a>
+				<a href="#about" data-role="button">About</a>
+				<a href="#products" data-role="button">Products</a>
+				<a href="#contact" data-role="button">Contact</a>
+			</main>
+			<footer>
+				<h3>Footer</h3>
+			</footer>
+		</div>
+	</template>
+
+	<link rel="stylesheet" type="text/css" href="./css/fonts.css" />
+	<link rel="stylesheet" type="text/css" href="./css/icons.css" />
+	<link rel="stylesheet" type="text/css" href="./fonts/fontawesome/style.css" />
+	<link rel="stylesheet" type="text/css" href="./modules/pwa/style.css" />
+	<link rel="stylesheet" type="text/css" href="./modules/dialog/style.css" />
+	<script type="module" src="app.js"></script>
+</body>
+</html>
