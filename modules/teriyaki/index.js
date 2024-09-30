@@ -141,6 +141,19 @@ $.get_text = (url, cached = true) => new Promise((resolve, reject) => {
         .catch(err => reject(err));
 })
 
+$.get_json = (url, cached = true) => new Promise((resolve, reject) => {
+    let options = {};
+
+    if (!cached) {
+        options = {cache: "no-cache"}
+    }
+
+    fetch(url, options)
+        .then(response => response.json())
+        .then(json => resolve(json))
+        .catch(err => reject(err));
+})
+
 $.post = (url, data = null) => new Promise((resolve, reject) => {
     let options = {};
 
